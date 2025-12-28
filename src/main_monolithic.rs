@@ -31,7 +31,7 @@ struct Pagination {
 type AppState = Arc<RwLock<Vec<User>>>;
 
 #[tokio::main]
-async fn main() {
+async fn main_monolithic() {
     let state = Arc::new(RwLock::new(vec![
         User {
             id: 1, name: "Henry".into(), email: "kendingh@gmail.com".into()
